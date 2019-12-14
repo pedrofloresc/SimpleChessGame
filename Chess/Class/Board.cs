@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Chess.Class
 {
-    public class Board
+    public class Board: IEnumerable
     {
         public Spot[][] spots;
         public int Size { get; private set; }
@@ -98,6 +99,19 @@ namespace Chess.Class
                     this.spots[middleBlank][i] = new Spot(middleBlank,i);
                 }
             }
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            for (int i = 0; i < Size; i++)
+            {
+                for (int j = 0; j < Size; j++)
+                {
+                    if(spots[i][j].piece != null)
+                        yield return spots[i][j].piece.GetType().Name;
+                }
+            }
+           
         }
     }
 }

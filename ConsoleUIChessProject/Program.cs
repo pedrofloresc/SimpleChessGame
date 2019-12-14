@@ -26,6 +26,8 @@ namespace ConsoleUIChessProject
 
                 if (!game.CurrentPlayerTurn.IsWhitePlayer)
                     playersTurn = Chess.Enum.Color.Black;
+                else
+                    playersTurn = Chess.Enum.Color.White;
                 Console.WriteLine(playersTurn.ToString() + " Player turn!!");
                 Console.WriteLine("Menu:");
                 Console.WriteLine("type: 1 to Exit");
@@ -43,10 +45,8 @@ namespace ConsoleUIChessProject
                         break;
                 }
 
-                Console.WriteLine("You Pressed: " + key.Key);
-
-
-                Console.WriteLine(game.Move(game.Player1, 0, 0, 1, 1));
+                Console.WriteLine(game.Move(game.Player1, 1, 0, 2, 0));
+                game.DisplayBoard();
             }
             while (game.GameStatus == Chess.Enum.GameStatus.ACTIVE && !Exit);
             Console.WriteLine("Good Bye!");

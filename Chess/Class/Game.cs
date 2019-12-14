@@ -8,6 +8,14 @@ namespace Chess.Class
 {
     public class Game
     {
+        public Board Board { get; set; }
+        public Player Player1 { get; set; }
+        public Player Player2 { get; set; }
+
+        public Player CurrentPlayerTurn { get; private set; }
+
+        public List<Move> Moves { get; set; }
+        public Enum.GameStatus GameStatus { get; set; }
         public Game(Player player1, Player player2)
         {
             if ((player1.IsWhitePlayer != true && player2.IsWhitePlayer != true)
@@ -53,6 +61,15 @@ namespace Chess.Class
             return CurrentPlayerTurn.IsWhitePlayer == true ? "White player turn!." : "Black playr turn!";
         }
 
+        public void DisplayBoard()
+        {
+            foreach(var boardPieces in Board)
+            {
+                Console.WriteLine("Piece"+ Convert.ToString(boardPieces));
+            }
+
+        }
+
         private void MakeMove(Board board, Move move)
         {
             board.spots[move.End.CoordinateX][move.End.CoordinateY].piece = board.spots[move.Start.CoordinateX][move.Start.CoordinateY].piece ;
@@ -67,14 +84,7 @@ namespace Chess.Class
                 CurrentPlayerTurn = Player1;
         }
 
-        public Board Board { get; set; }
-        public Player Player1 { get; set; }
-        public Player Player2 { get; set; }
-
-        public Player CurrentPlayerTurn { get; private set; }
-
-        public List<Move> Moves { get; set; }
-        public Enum.GameStatus GameStatus { get; set; }
+     
 
 
     }

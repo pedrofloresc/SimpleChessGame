@@ -13,9 +13,32 @@ namespace Chess.Class
         {
         }
 
-        public override bool CanMove(Board board, Spot start, Spot End)
+        public override bool CanMove(Board board, Spot start, Spot end)
         {
-            throw new NotImplementedException();
+            var iniSpot = board.spots[start.CoordinateX][start.CoordinateY];
+            var endSpot = board.spots[end.CoordinateX][end.CoordinateY];
+
+            if(endSpot.piece != null)
+            {
+                return false;
+            }
+            else if(iniSpot.CoordinateY == endSpot.CoordinateY 
+                && endSpot.CoordinateX - iniSpot.CoordinateX == 1
+                && true //need to evaluate direction 
+                )
+            {
+                return true;
+            }
+            //eat
+            else if(iniSpot.CoordinateY + 1 == endSpot.CoordinateY && iniSpot.CoordinateX + 1 == endSpot.CoordinateX // right lower diagonal
+            || true //left lower diagonal
+            || true //right upper diagonal
+            || true) // left upper diagonal
+                {
+
+            }
+
+            return false;
         }
     }
 }
