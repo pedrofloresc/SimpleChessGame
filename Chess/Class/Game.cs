@@ -63,16 +63,30 @@ namespace Chess.Class
 
         public void DisplayBoard()
         {
-            foreach(var boardPieces in Board)
+            int counter = 0;
+            StringBuilder stringBuilder = new StringBuilder();
+            Console.WriteLine("---------------------------------");
+            foreach (var boardPieces in Board)
             {
-                Console.WriteLine("Piece"+ Convert.ToString(boardPieces));
-            }
+                counter++;
+                stringBuilder.Append(Convert.ToString(boardPieces));
+                stringBuilder.Append("|");
 
+                if (counter == Board.Size)
+                {
+                    Console.WriteLine(stringBuilder.ToString());
+                    Console.WriteLine("---------------------------------");
+                    stringBuilder.Clear();
+                    counter = 0;
+                }
+                
+            }
+            
         }
 
         private void MakeMove(Board board, Move move)
         {
-            board.spots[move.End.CoordinateX][move.End.CoordinateY].piece = board.spots[move.Start.CoordinateX][move.Start.CoordinateY].piece ;
+            board.spots[move.End.CoordinateX][move.End.CoordinateY].piece = board.spots[move.Start.CoordinateX][move.Start.CoordinateY].piece;
             board.spots[move.Start.CoordinateX][move.Start.CoordinateY].piece = null;
         }
 
@@ -84,7 +98,7 @@ namespace Chess.Class
                 CurrentPlayerTurn = Player1;
         }
 
-     
+
 
 
     }

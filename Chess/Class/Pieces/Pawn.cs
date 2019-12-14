@@ -30,7 +30,8 @@ namespace Chess.Class
                 return true;
             }
             //eat
-            else if(iniSpot.CoordinateY + 1 == endSpot.CoordinateY && iniSpot.CoordinateX + 1 == endSpot.CoordinateX // right lower diagonal
+            else if(iniSpot.CoordinateY + 1 == endSpot.CoordinateY 
+                && iniSpot.CoordinateX + 1 == endSpot.CoordinateX // right lower diagonal
             || true //left lower diagonal
             || true //right upper diagonal
             || true) // left upper diagonal

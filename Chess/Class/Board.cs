@@ -107,8 +107,10 @@ namespace Chess.Class
             {
                 for (int j = 0; j < Size; j++)
                 {
-                    if(spots[i][j].piece != null)
-                        yield return spots[i][j].piece.GetType().Name;
+                    if (spots[i][j].piece != null)
+                        yield return spots[i][j].piece.GetType().Name[0];
+                    else
+                        yield return " ";
                 }
             }
            
