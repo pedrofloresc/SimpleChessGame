@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Chess.Class
 {
-    public class Spot: IEnumerable
+    public class Spot
     {
         
         public Spot(int coordinateX, int coordinateY)
@@ -18,10 +18,6 @@ namespace Chess.Class
         public int CoordinateX;
         public int CoordinateY;
         public Piece piece;
-
-        public IEnumerator GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
+         
     }
 }
