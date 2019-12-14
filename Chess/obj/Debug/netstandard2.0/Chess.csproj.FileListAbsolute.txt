@@ -1,8 +1,0 @@
-C:\Users\DhaReaL\Documents\Visual Studio 2019\Projects\SimpleChessGame\Chess\obj\Debug\netstandard2.0\Chess.csprojAssemblyReference.cache
-C:\Users\DhaReaL\Documents\Visual Studio 2019\Projects\SimpleChessGame\Chess\obj\Debug\netstandard2.0\Chess.AssemblyInfoInputs.cache
-C:\Users\DhaReaL\Documents\Visual Studio 2019\Projects\SimpleChessGame\Chess\obj\Debug\netstandard2.0\Chess.AssemblyInfo.cs
-C:\Users\DhaReaL\Documents\Visual Studio 2019\Projects\SimpleChessGame\Chess\bin\Debug\netstandard2.0\Chess.deps.json
-C:\Users\DhaReaL\Documents\Visual Studio 2019\Projects\SimpleChessGame\Chess\bin\Debug\netstandard2.0\Chess.dll
-C:\Users\DhaReaL\Documents\Visual Studio 2019\Projects\SimpleChessGame\Chess\bin\Debug\netstandard2.0\Chess.pdb
-C:\Users\DhaReaL\Documents\Visual Studio 2019\Projects\SimpleChessGame\Chess\obj\Debug\netstandard2.0\Chess.dll
-C:\Users\DhaReaL\Documents\Visual Studio 2019\Projects\SimpleChessGame\Chess\obj\Debug\netstandard2.0\Chess.pdb
