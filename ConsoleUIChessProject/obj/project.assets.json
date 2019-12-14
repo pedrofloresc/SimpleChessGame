@@ -1,0 +1,88 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "Chess/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Chess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Chess.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Chess/1.0.0": {
+      "type": "project",
+      "path": "../Chess/Chess.csproj",
+      "msbuildProject": "../Chess/Chess.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.0": [
+      "Chess >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\DhaReaL\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\DhaReaL\\Documents\\Visual Studio 2019\\Projects\\SimpleChessGame\\ConsoleUIChessProject\\ConsoleUIChessProject.csproj",
+      "projectName": "ConsoleUIChessProject",
+      "projectPath": "C:\\Users\\DhaReaL\\Documents\\Visual Studio 2019\\Projects\\SimpleChessGame\\ConsoleUIChessProject\\ConsoleUIChessProject.csproj",
+      "packagesPath": "C:\\Users\\DhaReaL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DhaReaL\\Documents\\Visual Studio 2019\\Projects\\SimpleChessGame\\ConsoleUIChessProject\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\DhaReaL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "projectReferences": {
+            "C:\\Users\\DhaReaL\\Documents\\Visual Studio 2019\\Projects\\SimpleChessGame\\Chess\\Chess.csproj": {
+              "projectPath": "C:\\Users\\DhaReaL\\Documents\\Visual Studio 2019\\Projects\\SimpleChessGame\\Chess\\Chess.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.0": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

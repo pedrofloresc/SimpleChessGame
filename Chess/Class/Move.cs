@@ -7,18 +7,19 @@ namespace Chess.Class
 {
     public class Move
     {
-        private Player player;
-        private Spot start;
-        private Spot end;
-        private Piece pieceMoved;
-        private Piece pieceKilled;
+        public Player Player { get; private set; }
+        public Spot Start { get; private set; }
+        public Spot End { get; private set; }
+        public Piece PieceMoved { get; private set; }
+        public Piece PieceKilled { get; private set; }
 
         public Move(Player player, Spot start, Spot end)
         {
-            this.player = player;
-            this.start = start;
-            this.end = end;
-            this.pieceMoved = start.piece;
+            this.Player = player;
+            this.Start = start;
+            this.End = end;
+            this.PieceMoved = start.piece;
+            this.PieceKilled = end.piece;
         }
          
     }

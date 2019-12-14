@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Chess.Class;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,5 +15,10 @@ namespace Chess.BaseClass
 
         public bool IsWhite { get; set; }
         public bool IsKilled { get; set; }
+
+        public virtual bool CanMove(Board board, Spot start, Spot End)
+        {
+            return true;
+        }
     }
 }

@@ -39,53 +39,53 @@ namespace Chess.Class
                         pawnRow = 1;
                     else
                         pawnRow = 6;
-                    this.spots[pawnRow][i] = new Spot();
+                    this.spots[pawnRow][i] = new Spot(pawnRow, i);
                     this.spots[pawnRow][i].piece = pawn;
                 }
 
-                int piecesPosition = 0;
+                int piecesPositionX = 0;
                 if (color == Enum.Color.Black)
-                    piecesPosition = 7;
+                    piecesPositionX = 7;
                 //setting tower
 
-                List<int> listRookYPosition = new List<int>() { 0, 7 };
+                List<int> listRookPositionY = new List<int>() { 0, 7 };
 
-                foreach (var rookYPosition in listRookYPosition)
+                foreach (var rookPositionY in listRookPositionY)
                 {
-                    this.spots[piecesPosition][rookYPosition] = new Spot();
-                    this.spots[piecesPosition][rookYPosition].piece = new Rook(color == Enum.Color.White, false);
+                    this.spots[piecesPositionX][rookPositionY] = new Spot(piecesPositionX, rookPositionY);
+                    this.spots[piecesPositionX][rookPositionY].piece = new Rook(color == Enum.Color.White, false);
                 }
 
 
                 //setting knight
-                List<int> listKnightYPosition = new List<int>() { 1, 6 };
+                List<int> listKnightPositionY = new List<int>() { 1, 6 };
 
-                foreach (var knightYPosition in listKnightYPosition)
+                foreach (var knightPositionY in listKnightPositionY)
                 {
-                    this.spots[piecesPosition][knightYPosition] = new Spot();
-                    this.spots[piecesPosition][knightYPosition].piece = new Knight(color == Enum.Color.White, false); ;
+                    this.spots[piecesPositionX][knightPositionY] = new Spot(piecesPositionX, knightPositionY);
+                    this.spots[piecesPositionX][knightPositionY].piece = new Knight(color == Enum.Color.White, false); ;
                 }
 
                 //setting bishop
-                List<int> listBishopYPosition = new List<int>() { 2, 5 };
+                List<int> listBishopPositionY = new List<int>() { 2, 5 };
 
-                foreach (var bishopYPosition in listBishopYPosition)
+                foreach (var bishopPositionY in listBishopPositionY)
                 {
-                    this.spots[piecesPosition][bishopYPosition] = new Spot();
-                    this.spots[piecesPosition][bishopYPosition].piece = new Bishop(color == Enum.Color.White, false); ;
+                    this.spots[piecesPositionX][bishopPositionY] = new Spot(piecesPositionX, bishopPositionY);
+                    this.spots[piecesPositionX][bishopPositionY].piece = new Bishop(color == Enum.Color.White, false); ;
                 }
 
                 //setting queen
-                int queenYPosition = 4;
+                int queenPositionY = 4;
 
-                this.spots[piecesPosition][queenYPosition] = new Spot();
-                this.spots[piecesPosition][queenYPosition].piece = new Queen(color == Enum.Color.White, false); ;
+                this.spots[piecesPositionX][queenPositionY] = new Spot(piecesPositionX, queenPositionY);
+                this.spots[piecesPositionX][queenPositionY].piece = new Queen(color == Enum.Color.White, false); ;
 
                 //setting king
-                int kingYPosition = 3;
+                int kingPositionY = 3;
 
-                this.spots[piecesPosition][kingYPosition] = new Spot();
-                this.spots[piecesPosition][kingYPosition].piece = new King(color == Enum.Color.White, false); ;
+                this.spots[piecesPositionX][kingPositionY] = new Spot(piecesPositionX, kingPositionY);
+                this.spots[piecesPositionX][kingPositionY].piece = new King(color == Enum.Color.White, false); ;
 
             }
 
@@ -95,7 +95,7 @@ namespace Chess.Class
             {
                 for (int i = 0; i < Size; i++)
                 {
-                    this.spots[middleBlank][i] = new Spot();
+                    this.spots[middleBlank][i] = new Spot(middleBlank,i);
                 }
             }
         }

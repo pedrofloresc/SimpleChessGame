@@ -29,14 +29,34 @@ namespace Chess.Class
         public string Move(Player player, int startX, int startY, int endX, int endY)
         {
             if (GameStatus != Enum.GameStatus.ACTIVE)
-                return "The game is inactive, Status: " + GameStatus.ToString(); 
+                return "The game is inactive, Status: " + GameStatus.ToString();
             else if (player != CurrentPlayerTurn)
                 return "Is not your turn!!";
 
+            var initialSpot = Board.spots[startX][startY];
 
-            this.ChangeTurn();
+            if (initialSpot.piece == null)
+                return "No piece in starting position";
+
+            var endSpot = Board.spots[endX][endY];
+            if (endSpot.piece != null && endSpot.piece.IsWhite == initialSpot.piece.IsWhite)
+                return "There is a piece of the same color in the ending spot.";
+
+            if (initialSpot.piece.CanMove(Board, initialSpot, endSpot))
+            {
+                Move move = new Move(player, initialSpot, endSpot);
+                MakeMove(Board, move);
+                Moves.Add(move);
+                this.ChangeTurn();
+            }
 
             return CurrentPlayerTurn.IsWhitePlayer == true ? "White player turn!." : "Black playr turn!";
+        }
+
+        private void MakeMove(Board board, Move move)
+        {
+            board.spots[move.End.CoordinateX][move.End.CoordinateY].piece = board.spots[move.Start.CoordinateX][move.Start.CoordinateY].piece ;
+            board.spots[move.Start.CoordinateX][move.Start.CoordinateY].piece = null;
         }
 
         private void ChangeTurn()
@@ -53,9 +73,9 @@ namespace Chess.Class
 
         public Player CurrentPlayerTurn { get; private set; }
 
-        public List<Move> Moves {get ;set;}
+        public List<Move> Moves { get; set; }
         public Enum.GameStatus GameStatus { get; set; }
 
-        
+
     }
 }

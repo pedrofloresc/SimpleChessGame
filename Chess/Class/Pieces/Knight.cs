@@ -6,15 +6,16 @@ using System.Text;
 
 namespace Chess.Class
 {
-    public class Knight : Piece, IMove
+    public class Knight : Piece
     {
         public Knight(bool isWhite, bool isKilled) : base(isWhite, isKilled)
         {
         }
 
-        public bool Move(Pierce piece, int startX, int startY, int endX, int endY)
+        public override bool CanMove(Board board, Spot start, Spot End)
         {
             throw new NotImplementedException();
         }
+         
     }
 }

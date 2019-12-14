@@ -6,20 +6,16 @@ using System.Text;
 
 namespace Chess.Class
 {
-    public class Pawn : Piece, IMove
+
+    public class Pawn : Piece
     {
         public Pawn(bool isWhite, bool isKilled) : base(isWhite, isKilled)
         {
         }
 
-        public bool Move(Pierce piece, int startX, int startY, int endX, int endY)
+        public override bool CanMove(Board board, Spot start, Spot End)
         {
-            if (this.IsKilled)
-                return false;
-            if (startX < 0 || startY < 0 || endX < 0 || endY < 0)
-                return false;
-
-            return true;
+            throw new NotImplementedException();
         }
     }
 }
